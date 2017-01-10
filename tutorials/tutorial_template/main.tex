@@ -1,180 +1,421 @@
+% This file was created (at least in part) by the script ParseMdtoLatex by Louis du Plessis
+% (Available from https://github.com/taming-the-beast)
+
 \documentclass[11pt]{article}
 \input{preamble}
 
-\usepackage{tikz}
-
-\setlength{\topmargin}{-0.4in}
-\setlength{\headheight}{14.5pt}
-\pagestyle{fancy}
-
-\usepackage[breaklinks]{hyperref}
-\usepackage[all]{hypcap}
-\hypersetup{colorlinks=true,linkcolor=linkscol,citecolor=citescol,urlcolor=urlscol}
-
-\definecolor{lg}{gray}{0.75}
-\def\gcirc{{%
-    \setbox0\hbox{$\fullmoon$}%
-    \rlap{\hbox to \wd0{\hss{$\textcolor{lg}{\newmoon}$}\hss}}\box0
-}}
+% Add your bibtex library here
+\addbibresource{master-refs.bib}
 
 
+%%%%%%%%%%%%%%%%%%%%
+% Do NOT edit this %
+%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \renewcommand{\headrulewidth}{0.5pt}
 \headsep = 20pt
 \lhead{ }
 \rhead{\textsc {BEAST v2 Tutorial}}
-
 \thispagestyle{plain}
 
+
+%%%%%%%%%%%%%%%%%%
+% Tutorial title %
+%%%%%%%%%%%%%%%%%%
 \begin{center}
-\textbf{\LARGE Tuturial using BEAST v2.$*$}\\\vspace{2mm}
-\textbf{\textcolor{mycol}{\Large Tuturial Topic}}\\
-\vspace{4mm}
-{\Large {\em Author I. Name}}
+
+	% Enter the name of your tutorial here
+	\textbf{\LARGE Tutorial using BEAST v2.4.2}\\\vspace{2mm}
+
+	% Enter a short description of your tutorial here
+	\textbf{\textcolor{mycol}{\Large Tutorial template}}\\
+
+	\vspace{4mm}
+
+	% Enter the names of all the authors here
+	{\Large {\em Author I. Name}}
 \end{center}
 
+Template for an empty tutorial
 
-Bayesian inference of phylogenies \citet{drummond06}.
+%%%%%%%%%%%%%%%%%
+% Tutorial body %
+%%%%%%%%%%%%%%%%%
 
-\bigskip
-\section{Background}
+\section{Background}\label{background}
 
-background
+This is a template tutorial and style guide to help formatting Markdown
+tutorials.
 
-\begin{figure}[h]
-\centering
-\fbox{\includegraphics[scale=0.5]{figures/example_figure.pdf}}
-\caption{\small Figure caption example}
-\label{fig:example}
-\end{figure}
+Please start the tutorial by adding some background about the tutorial
+in this section, clearly explaining the question/problem and the type of
+analysis that the methods in the tutorial should be used for. In the
+next section please add a short description of all the programs or
+packages used in the tutorial. The tutorial exercise should follow this
+part. Please add a short explanation on the dataset used in the tutorial
+before starting with the exercise. Please also add a section after the
+exercise interpreting the results. End your tutorial with some useful
+links.
 
-
-
-\bigskip
-\subsection{Subsection} 
-
-Subsection \citep{zuckerkandl62}. 
-
+Some of the text in this tutorial template is just dummy filler text.
+Please do not try to understand it.
 
 \clearpage
-\newpage
-\section{Programs used in this Exercise}\label{programsSec}
 
-\descriptionhead{BEAST -- Bayesian Evolutionary Analysis Sampling Trees}
+\section{Programs used in this
+Exercise}\label{programs-used-in-this-exercise}
 
-BEAST is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees \citep{drummond06,drummond07,Bouckaert2014}. The development and maintenance of BEAST is a large, collaborative effort and the program includes a wide array of different types of analyses:
+\subsubsection{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees
+2}\label{beast2---bayesian-evolutionary-analysis-sampling-trees-2}
 
-\vspace{-4mm}
+BEAST2 is a free software package for Bayesian evolutionary analysis of
+molecular sequences using MCMC and strictly oriented toward inference
+using rooted, time-measured phylogenetic trees \citep{Bouckaert2014}.
+This tutorial uses the BEAST2 version 2.4.2.
+
+\clearpage
+
+\section{Practical: Exercise title}\label{practical-exercise-title}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta
+augue id vulputate iaculis. Sed non posuere lectus. Integer at magna
+quis nulla tempus cursus. Integer ut nisl elit. Nam pellentesque
+pharetra orci eu facilisis. Nullam vitae leo tempus nunc consequat
+finibus ut ut nisi. Phasellus vitae faucibus dolor, id venenatis lacus.
+Sed eu lacus a nibh luctus semper. Proin non tellus odio. Duis elementum
+lorem eget nisl rhoncus feugiat. In hendrerit vehicula purus. Aliquam
+ornare libero quis tincidunt efficitur. Nam sapien augue, mattis nec
+hendrerit ut, commodo in nisi.
+
+\subsection{This is a subsection}\label{this-is-a-subsection}
+
+Quisque a dictum erat. Curabitur congue sapien sit amet pharetra
+pretium. Proin posuere euismod velit, eget faucibus ex varius id. Fusce
+sodales maximus malesuada. Mauris auctor dui in justo interdum egestas.
+Cras dapibus commodo nulla vitae congue. Vestibulum sit amet justo sit
+amet ex pretium bibendum. Donec ac mollis lorem, vel semper enim.
+Suspendisse sit amet auctor dui. Nullam ac efficitur mauris. Proin
+aliquam tincidunt felis nec semper. Vestibulum vestibulum, eros sit amet
+consectetur blandit, elit dolor posuere sem, a porta purus odio sit amet
+quam. Quisque dapibus erat sem, at vulputate libero dapibus sit amet.
+Mauris rhoncus odio nisl, nec interdum lacus consequat nec. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos.
+
+Etiam tincidunt porttitor rutrum. Nulla facilisi. Mauris vehicula, justo
+ac ultricies tempus, quam erat hendrerit dui, vel pharetra sapien nibh
+vel ex. Sed molestie eu dui in laoreet. Pellentesque ultrices, orci
+vitae lacinia suscipit, erat sapien elementum ligula, sit amet viverra
+ante lorem eget elit. Cras euismod felis libero, pharetra lobortis arcu
+congue vehicula. Nullam posuere dapibus mauris, eget vulputate ligula
+auctor eget. Aenean et tempus est. Aliquam vehicula arcu vitae metus
+dictum viverra. Aliquam vitae purus mauris. Nullam interdum mauris eget
+sagittis consequat. Quisque in orci elementum, eleifend tortor eget,
+bibendum orci. Etiam aliquet dolor non neque semper fermentum. Praesent
+vitae venenatis mi, ut faucibus ligula. Phasellus vitae lorem neque.
+Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+\subsubsection{This is a sub-subsection}\label{this-is-a-sub-subsection}
+
+Etiam posuere urna ut condimentum sagittis. Suspendisse posuere, ex nec
+eleifend fringilla, nisl augue posuere augue, elementum mollis justo
+felis sed purus. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Mauris efficitur eros ut turpis
+elementum vestibulum. Sed sit amet nisi at nunc luctus laoreet id ac
+enim. Aliquam elementum risus id urna dictum fringilla. Aenean lobortis,
+risus euismod molestie pulvinar, massa odio pharetra nulla, vitae
+facilisis neque magna sed lorem. Praesent ipsum enim, commodo ut
+pharetra in, sollicitudin ac massa. Donec et interdum mauris. Ut
+molestie, risus quis fermentum placerat, diam risus posuere nisi, eget
+viverra tortor neque ac sem. Donec viverra magna non dolor aliquam, in
+suscipit massa facilisis. Suspendisse congue arcu sed risus consectetur
+commodo. Aenean metus odio, volutpat at tincidunt id, ullamcorper in
+dui. Cum sociis natoque penatibus et magnis dis parturient montes,
+nascetur ridiculus mus. Cras ut sem in odio sodales iaculis non quis
+neque.
+
+Quisque non mollis massa, nec eleifend dolor. Proin porta elit metus, a
+lobortis enim venenatis ac. Nam scelerisque consectetur mi et gravida.
+Vestibulum placerat, est vitae euismod finibus, purus nisl viverra quam,
+eget condimentum mauris magna vel nisl. Phasellus pretium vitae diam in
+volutpat. Cras gravida non quam ut consectetur. Vivamus congue vulputate
+lorem.
+
+\subsection{This is another
+subsection}\label{this-is-another-subsection}
+
+Praesent sodales est in tempor commodo. Suspendisse nulla metus, gravida
+eget malesuada vel, viverra eu felis. In vitae leo facilisis, ornare
+nunc nec, tempor tortor. Duis pretium mi eros, at consequat neque
+tincidunt eget. Mauris vestibulum venenatis arcu, eget lacinia arcu
+faucibus ut. Phasellus aliquam dui ipsum, a eleifend lacus fermentum at.
+Suspendisse congue orci quis ante consequat ornare. Integer a massa
+blandit, vestibulum eros ut, pulvinar augue. Class aptent taciti
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+Quisque a urna a massa congue rhoncus. Donec bibendum tempus velit. Nam
+varius augue sit amet lacinia hendrerit. Proin tincidunt massa ut mi
+vestibulum placerat. Phasellus eget dui molestie, aliquet libero
+efficitur, vehicula ex. Pellentesque ultricies ante leo, eu lobortis
+odio convallis id. Donec vitae risus dui. Nulla orci velit, ultricies
+sed finibus quis, blandit quis arcu. Morbi non neque non odio rutrum
+condimentum. Vivamus libero metus, vehicula vitae elit ac, tincidunt
+pretium dui. Proin condimentum fringilla diam, blandit blandit nisl
+dapibus vel. Proin ante felis, accumsan eget ligula et, lobortis dictum
+nunc. Mauris a ante dignissim ipsum tincidunt tristique.
+
+\clearpage
+
+\section{Tutorial style guide}\label{tutorial-style-guide}
+
+\subsection{Text styling}\label{text-styling}
+
+This is how to write \emph{italic text}.
+
+This is how to write \textbf{bold text}.
+
+This is how to write \textbf{\emph{bold and italic text}}.
+
+Do text superscripts like this 7$^{th}$, x$^{2y}$ or x$^{2y + 3z}$.
+
+\subsection{Lists}\label{lists}
+
+\subsubsection{Unnumbered lists}\label{unnumbered-lists}
+
 \begin{itemize}
-\item Phylogenetic tree inference under different models for substitution rate variation \vspace{-3mm}
-\begin{itemize}
-\item Constant rate molecular clock \citep{zuckerkandl62} \vspace{-2mm}
-\item Uncorrelated relaxed clocks \citep{drummond06} \vspace{-2mm}
-\item Random local molecular clocks \citep{drummond10} \vspace{-2mm}
+
+\item
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\item
+  Integer pharetra arcu ut nisl mollis ultricies.
+
+  \begin{itemize}
+  
+  \item
+    Fusce nec tortor at enim cursus dictum.
+  \item
+    Phasellus nec urna quis velit eleifend convallis sodales nec augue.
+  \end{itemize}
+\item
+  In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
+\item
+  Nam vitae turpis eu lacus imperdiet mollis id at augue.
+\item
+  Sed sed turpis ac dolor mollis accumsan.
 \end{itemize}
-\item Estimates of species divergence dates and fossil calibration under a wide range of branch-time models and calibration methods \vspace{-3mm}
-\item Analysis of non-contemporaneous sequences \vspace{-3mm}
-\item Heterogenous substitution models across data partitions \vspace{-3mm}
-\item Population genetic analyses\vspace{-3mm}
-\begin{itemize}
-\item Estimation of demographic parameters (population sizes, growth/decline, migration) \vspace{-2mm}
-\item Bayesian skyline plots \vspace{-2mm}
-\item Phylogeography \citep{lemey09} \vspace{-2mm}
-\end{itemize}
-\item Gene-tree/species-tree inference \citep[$*$BEAST;][]{heled10} \vspace{-3mm}
-\item and more...\vspace{-3mm}
-\end{itemize}
 
+\subsubsection{Numbered lists}\label{numbered-lists}
 
-\newpage
-\section{Practical: Exercise title}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 
-Introduction
+\item
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\item
+  Integer pharetra arcu ut nisl mollis ultricies.
 
-\bigskip
-\subsection{The Data}
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  
+  \item
+    Fusce nec tortor at enim cursus dictum.
+  \item
+    Phasellus nec urna quis velit eleifend convallis sodales nec augue.
+  \end{enumerate}
+\item
+  In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
+\item
+  Nam vitae turpis eu lacus imperdiet mollis id at augue.
+\item
+  Sed sed turpis ac dolor mollis accumsan.
+\end{enumerate}
 
-\begin{framed}
-Download data and pre-cooked output files from:
-\begin{center}
-\href{google.com}{URL} 
-\end{center}
-\end{framed}
+\subsubsection{Mixed lists}\label{mixed-lists}
 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 
+\item
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\item
+  Integer pharetra arcu ut nisl mollis ultricies.
 
-\bigskip
-\subsection{Creating the Analysis File with BEAUti}
+  \begin{itemize}
+  
+  \item
+    Fusce nec tortor at enim cursus dictum.
+  \item
+    Phasellus nec urna quis velit eleifend convallis sodales nec augue.
+  \end{itemize}
+\item
+  In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
+\item
+  Nam vitae turpis eu lacus imperdiet mollis id at augue.
+\item
+  Sed sed turpis ac dolor mollis accumsan.
+\end{enumerate}
 
-Creating a properly-formatted BEAST XML file from scratch is not a simple task. However, BEAUti provides a simple way to navigate the various elements specific to the BEAST XML format. 
+\subsection{Figures}\label{figures}
 
-\begin{framed}
-Begin by executing the BEAUti program
-\end{framed}
-
-
-\bigskip
-\subsubsection{Install BEAST 2 Plug-Ins}
-
-Next, we have to install the BEAST 2 packages (also called ``plug-ins'' or ``add-ons'') that are needed for this analysis. 
-The package that we will use is called \mi{SA}.
-\begin{framed}
-Open the \mi{BEAST 2 Package Manager} by navigating to \mi{File\textrightarrow Manage Packages} in the menu. [Figure \ref{packageManage}]
-\end{framed}
-
-In the package manager, you can install all of the available plug-ins for BEAST 2. 
-These include a number of packages for analyses such as species delimitation (DISSECT, STACEY), population dynamics (MASTER), the phylodynamics of infectious disease (BDSKY, phylodynamics), etc. 
-\begin{framed}
-Install the \mi{SA} package by selecting it and clicking the \mi{Install/Upgrade} button. [Figure \ref{packageManage}]
-\end{framed}
-
-\begin{figure}[h!]
-\centering
-\fbox{\includegraphics[width=5in]{screens/beast2_package_manager.pdf}}
-\caption{\small The BEAST2 Package Manager.}
-\label{packageManage}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.250000\textwidth]{figures/Logo_bw.png}
+    \caption{This figure is 25\% of the page width.}
+    \label{fig:example1}
 \end{figure}
 
-It is important to note that you only need to install a BEAST 2 package once, thus if you close BEAUti, you don't have to load \mi{SA} the next time you open the program. 
-However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST 2.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.100000\textwidth]{figures/Logo_bw.png}
+    \caption{This figure is only 10\% of the page width.}
+    \label{fig:example2}
+\end{figure}
+
+\section{Code}\label{code}
+
+A bit of inline monospaced font can be made \lstinline!like this!.
+Larger code blocks can be made by using the code environment:
+
+Java:
+
+\begin{lstlisting}[language=Java]
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+\end{lstlisting}
+
+XML:
+
+\begin{lstlisting}[language=XML]
+    <BirthDeathSkylineModel spec="BirthDeathSkylineModel" id="birthDeath" tree="@tree" contemp="true">
+          <parameter name="origin" id="origin" value ="100" lower="0."/>    
+          <parameter name="R0" id="R0" value="2" lower="0." dimension ="10"/>
+          <parameter name="becomeUninfectiousRate" id="becomeUninfectiousRate" value="1" lower="0." dimension ="10"/>
+          <parameter name="samplingProportion" id="samplingProportion" value="0."/>
+          <parameter name="rho" id="rho" value="1e-6" lower="0." upper="1."/>
+    </BirthDeathSkylineModel>
+\end{lstlisting}
+
+R:
+
+\begin{lstlisting}[language=R]
+    > myString <- "Hello, World!"
+    > print (myString)
+    [1] "Hello, World!"
+\end{lstlisting}
+
+\section{Equations}\label{equations}
+
+Inline equations: $ \dot{x} = \sigma(y-x) $
+
+Displayed equations:
+
+\begin{equation}
+    \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\end{equation}
+
+\subsection{Instruction boxes}\label{instruction-boxes}
+
+Use block-quotes for step-by-step instruction that the user should
+perform (this will produce a framed box on the website):
+
 \begin{framed}
-Close the \mi{BEAST 2 Package Manager} and {\textcolor{red}{\underline{\bf restart BEAUti}}} to fully load the \mi{SA} package.
-\end{framed}
+The data we have is not the data we want, and the data we need is not
+the data we have.
 
-
-
-
-%%%%%
-\bigskip
-\section{Useful Links}
+We can input \textbf{any} formatted text in here:
 
 \begin{itemize}
-\item \href{http://www.beast2.org/book.html}{\textit{Bayesian Evolutionary Analysis with BEAST 2}}  \citep{BEAST2book2014}\\ \vspace{-7mm}
-\item BEAST 2 website and documentation: \href{http://www.beast2.org/}{http://www.beast2.org/} \\ \vspace{-7mm}
-\item BEAST 1 website and documentation: \href{http://beast.bio.ed.ac.uk}{http://beast.bio.ed.ac.uk} \\ \vspace{-7mm}
-\item Join the BEAST user discussion: \href{http://groups.google.com/group/beast-users}{http://groups.google.com/group/beast-users} \\ \vspace{-7mm}
+
+\item
+  Even
+\item
+  Lists
 \end{itemize}
 
-%Questions about this tutorial can be directed to Tracy Heath (email: \href{mailto:tracyh@berkeley.edu}{tracyh@berkeley.edu}).
+or equations:
 
-\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by \href{google.com}{Author Name} for the \href{https://www.compevol.auckland.ac.nz/en/events/events-2017/02/beast-south-pacific-1.html}{Taming the BEAST Workshop} on applied phylogenetics and molecular evolution and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
+\begin{equation}
+(x_1, \ldots, x_n) \left( \begin{array}{ccc}
+\phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+\vdots & \ddots & \vdots \\
+\phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+\end{array} \right)
+\left( \begin{array}{c}
+y_1 \\
+\vdots \\
+y_n
+\end{array} \right)
+\end{equation}
+\end{framed}
+
+\section{Hyperlinks}\label{hyperlinks}
+
+Add links to figures like this:
+
+\begin{itemize}
+
+\item
+  Figure \ref{fig:example1} is 25\% of the page width.
+\item
+  Figure \ref{fig:example2} is 10\% of the page width.
+\end{itemize}
+
+Add links to external URLs like \href{http://www.google.com}{this}.
+
+Links to equations or different sections within the same document are a
+little buggy.
+
+\clearpage
+
+\section{Useful Links}\label{useful-links}
+
+\begin{itemize}
+
+\item
+  \href{http://www.beast2.org/book.html}{Bayesian Evolutionary Analysis
+  with BEAST 2} \citep{BEAST2book2014}
+\item
+  BEAST 2 website and documentation: \url{http://www.beast2.org/}
+\item
+  BEAST 1 website and documentation: \url{http://beast.bio.ed.ac.uk}
+\item
+  Join the BEAST user discussion:
+  \url{http://groups.google.com/group/beast-users}
+\end{itemize}
+
+\clearpage
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% Tutorial disclaimer %
+%%%%%%%%%%%%%%%%%%%%%%%
+% Please do not change the license
+% Add the author names and relevant links
+% Add any other aknowledgments here
+\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by Author I. Name for \href{https://taming-the-beast.github.io}{Taming the BEAST} and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Do NOT edit this %
+%%%%%%%%%%%%%%%%%%%%
 Version dated: \today
 
 
-\nocite{hug07,inoue10,magallon09,marshall08,ronquist11,rutschmann07,lee09,li12,drummond07,gaut94,hasegawa89,muse92,rannala96,rannala07,sanderson97,sanderson02,sukumaran10,thorne05,yang97b,yang06,yoder00,benton03,graur04,ho07,hugall07,kishino90b,marshall90,stadler09,stadler10,stadler11,warnock12,pyron11,dosReis2012,dosReis2013,dosReis2011,arisbrosou03,arisbrosou02,baele12,baele13,benton00,brown11,Cutler2000a,Cutler2000,Darriba2013,doyle93,drummond2003,fan11,gandolfo08,Guindon2010,Hohna2012,hohna11,hasegawa85,hastings70,heath08b,heath08,Himmelmann2009,ho11,hull88,lartillot2013,lartillot2011,lartillot2012,lloyd12,lukoschek12,Morlon2011,Nylander2008,Parham2012,robinson98,rodrigo2003,shapiro11,Stadler2011,Stadler2013,Suchard2003,tajima93,Thorpe1982,weir2008,welch05,wilkinson11,xie11,Zuckerkandl1965,HeathMoore2013}
-
 
 \newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  REFERENCES  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%  REFERENCES  %
+%%%%%%%%%%%%%%%%
 
 \printbibliography[heading=relevref]
-
 
 
 \end{document}
