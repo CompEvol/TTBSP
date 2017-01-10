@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\usepackage{tikz}
+
+\setlength{\topmargin}{-0.4in}
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+
+\usepackage[breaklinks]{hyperref}
+\usepackage[all]{hypcap}
+\hypersetup{colorlinks=true,linkcolor=linkscol,citecolor=citescol,urlcolor=urlscol}
+
+\definecolor{lg}{gray}{0.75}
+\def\gcirc{{%
+    \setbox0\hbox{$\fullmoon$}%
+    \rlap{\hbox to \wd0{\hss{$\textcolor{lg}{\newmoon}$}\hss}}\box0
+}}
+
+
+\begin{document}
+\renewcommand{\headrulewidth}{0.5pt}
+\headsep = 20pt
+\lhead{ }
+\rhead{\textsc {BEAST v2 Tutorial}}
+
+\thispagestyle{plain}
+
+\begin{center}
+\textbf{\LARGE Tuturial using BEAST v2.$*$}\\\vspace{2mm}
+\textbf{\textcolor{mycol}{\Large Tuturial Topic}}\\
+\vspace{4mm}
+{\Large {\em Author I. Name}}
+\end{center}
+
+
+Bayesian inference of phylogenies \citet{drummond06}.
+
+\bigskip
+\section{Background}
+
+background
+
+\begin{figure}[h]
+\centering
+\fbox{\includegraphics[scale=0.5]{figures/example_figure.pdf}}
+\caption{\small Figure caption example}
+\label{fig:example}
+\end{figure}
+
+
+
+\bigskip
+\subsection{Subsection} 
+
+Subsection \citep{zuckerkandl62}. 
+
+
+\clearpage
+\newpage
+\section{Programs used in this Exercise}\label{programsSec}
+
+\descriptionhead{BEAST -- Bayesian Evolutionary Analysis Sampling Trees}
+
+BEAST is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees \citep{drummond06,drummond07,Bouckaert2014}. The development and maintenance of BEAST is a large, collaborative effort and the program includes a wide array of different types of analyses:
+
+\vspace{-4mm}
+\begin{itemize}
+\item Phylogenetic tree inference under different models for substitution rate variation \vspace{-3mm}
+\begin{itemize}
+\item Constant rate molecular clock \citep{zuckerkandl62} \vspace{-2mm}
+\item Uncorrelated relaxed clocks \citep{drummond06} \vspace{-2mm}
+\item Random local molecular clocks \citep{drummond10} \vspace{-2mm}
+\end{itemize}
+\item Estimates of species divergence dates and fossil calibration under a wide range of branch-time models and calibration methods \vspace{-3mm}
+\item Analysis of non-contemporaneous sequences \vspace{-3mm}
+\item Heterogenous substitution models across data partitions \vspace{-3mm}
+\item Population genetic analyses\vspace{-3mm}
+\begin{itemize}
+\item Estimation of demographic parameters (population sizes, growth/decline, migration) \vspace{-2mm}
+\item Bayesian skyline plots \vspace{-2mm}
+\item Phylogeography \citep{lemey09} \vspace{-2mm}
+\end{itemize}
+\item Gene-tree/species-tree inference \citep[$*$BEAST;][]{heled10} \vspace{-3mm}
+\item and more...\vspace{-3mm}
+\end{itemize}
+
+
+\newpage
+\section{Practical: Exercise title}
+
+Introduction
+
+\bigskip
+\subsection{The Data}
+
+\begin{framed}
+Download data and pre-cooked output files from:
+\begin{center}
+\href{google.com}{URL} 
+\end{center}
+\end{framed}
+
+
+
+\bigskip
+\subsection{Creating the Analysis File with BEAUti}
+
+Creating a properly-formatted BEAST XML file from scratch is not a simple task. However, BEAUti provides a simple way to navigate the various elements specific to the BEAST XML format. 
+
+\begin{framed}
+Begin by executing the BEAUti program
+\end{framed}
+
+
+\bigskip
+\subsubsection{Install BEAST 2 Plug-Ins}
+
+Next, we have to install the BEAST 2 packages (also called ``plug-ins'' or ``add-ons'') that are needed for this analysis. 
+The package that we will use is called \mi{SA}.
+\begin{framed}
+Open the \mi{BEAST 2 Package Manager} by navigating to \mi{File\textrightarrow Manage Packages} in the menu. [Figure \ref{packageManage}]
+\end{framed}
+
+In the package manager, you can install all of the available plug-ins for BEAST 2. 
+These include a number of packages for analyses such as species delimitation (DISSECT, STACEY), population dynamics (MASTER), the phylodynamics of infectious disease (BDSKY, phylodynamics), etc. 
+\begin{framed}
+Install the \mi{SA} package by selecting it and clicking the \mi{Install/Upgrade} button. [Figure \ref{packageManage}]
+\end{framed}
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[width=5in]{screens/beast2_package_manager.pdf}}
+\caption{\small The BEAST2 Package Manager.}
+\label{packageManage}
+\end{figure}
+
+It is important to note that you only need to install a BEAST 2 package once, thus if you close BEAUti, you don't have to load \mi{SA} the next time you open the program. 
+However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST 2.
+\begin{framed}
+Close the \mi{BEAST 2 Package Manager} and {\textcolor{red}{\underline{\bf restart BEAUti}}} to fully load the \mi{SA} package.
+\end{framed}
+
+
+
+
+%%%%%
+\bigskip
+\section{Useful Links}
+
+\begin{itemize}
+\item \href{http://www.beast2.org/book.html}{\textit{Bayesian Evolutionary Analysis with BEAST 2}}  \citep{BEAST2book2014}\\ \vspace{-7mm}
+\item BEAST 2 website and documentation: \href{http://www.beast2.org/}{http://www.beast2.org/} \\ \vspace{-7mm}
+\item BEAST 1 website and documentation: \href{http://beast.bio.ed.ac.uk}{http://beast.bio.ed.ac.uk} \\ \vspace{-7mm}
+\item Join the BEAST user discussion: \href{http://groups.google.com/group/beast-users}{http://groups.google.com/group/beast-users} \\ \vspace{-7mm}
+\end{itemize}
+
+%Questions about this tutorial can be directed to Tracy Heath (email: \href{mailto:tracyh@berkeley.edu}{tracyh@berkeley.edu}).
+
+\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by \href{google.com}{Author Name} for the \href{https://www.compevol.auckland.ac.nz/en/events/events-2017/02/beast-south-pacific-1.html}{Taming the BEAST Workshop} on applied phylogenetics and molecular evolution and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
+
+
+
+Version dated: \today
+
+
+\nocite{hug07,inoue10,magallon09,marshall08,ronquist11,rutschmann07,lee09,li12,drummond07,gaut94,hasegawa89,muse92,rannala96,rannala07,sanderson97,sanderson02,sukumaran10,thorne05,yang97b,yang06,yoder00,benton03,graur04,ho07,hugall07,kishino90b,marshall90,stadler09,stadler10,stadler11,warnock12,pyron11,dosReis2012,dosReis2013,dosReis2011,arisbrosou03,arisbrosou02,baele12,baele13,benton00,brown11,Cutler2000a,Cutler2000,Darriba2013,doyle93,drummond2003,fan11,gandolfo08,Guindon2010,Hohna2012,hohna11,hasegawa85,hastings70,heath08b,heath08,Himmelmann2009,ho11,hull88,lartillot2013,lartillot2011,lartillot2012,lloyd12,lukoschek12,Morlon2011,Nylander2008,Parham2012,robinson98,rodrigo2003,shapiro11,Stadler2011,Stadler2013,Suchard2003,tajima93,Thorpe1982,weir2008,welch05,wilkinson11,xie11,Zuckerkandl1965,HeathMoore2013}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  REFERENCES  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography[heading=relevref]
+
+
+
+\end{document}
